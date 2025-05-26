@@ -1,4 +1,4 @@
-import { ChevronLeft,ChevronRight } from 'lucide-react';
+import { ChevronLeft,ChevronRight, Mail } from 'lucide-react';
 
 <ChevronLeft size={24} />
 
@@ -47,32 +47,38 @@ export default function Recent()
             
         </div> */}
 
-   <div className="relative w-full rounded-xl overflow-hidden max-w-7xl mx-auto mt-10">
+   <div className="relative w-full rounded-xl overflow-hidden max-w-7xl mx-auto mt-10  " >
       <img
         src="/bg.jpg"
         alt="Background"
-        className="w-full h-40 object-cover"
+        className="w-full h-64 object-cover sm:h-60 md:h-40 "
       />
-      <div className="absolute inset-0 bg-blue-800/70 flex flex-col md:flex-row items-center justify-between px-8 py-6 text-white space-y-4 md:space-y-0">
-        <div className="text-center md:text-left">
-          <h2 className="text-2xl font-extrabold leading-snug">
-            Don't Miss Out Latest <br /> Trends & Offers
-          </h2>
-          <p className="text-sm mt-2">
-            Register to receive news about the latest offers & discount codes
-          </p>
-        </div>
-        <div className="flex w-full md:w-auto items-center gap-2">
-          <input
-            type="text"
-            placeholder="Enter your email"
-            className="px-4 py-2 rounded-md text-black w-full md:w-72 focus:outline-none focus:ring-2 focus:ring-blue-400"
-          />
-          <button className="bg-violet-600 hover:bg-violet-800 px-5 py-2 rounded-md font-semibold">
-            Subscribe
-          </button>
-        </div>
-      </div>
+      <div className="md:text-sm absolute inset-0 bg-blue-800/70 flex flex-col md:flex-row items-center justify-between px-8 py-6 text-white space-y-6 md:space-y-0">
+  <div className="text-center md:text-left md:mr-10">
+    <h2 className="text-1xl  font-extrabold leading-snug sm:text-2xl">
+      Don't Miss Out Latest <br /> Trends & Offers
+    </h2>
+    <p className="text-xs sm:text-sm mt-2">
+      Register to receive news about the latest offers & discount codes
+    </p>
+  </div>
+
+  <div className="flex w-full md:w-auto items-center flex-col sm:flex-row gap-3 sm:gap-2">
+    <div className="relative w-full max-w-sm">
+      <Mail className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 w-5 h-5" />
+      <input
+        type="email"
+        placeholder="Enter your email"
+        className="text-black pl-10 pr-4 py-2 border border-gray-300 rounded-md w-full focus:outline-none focus:ring-2 focus:ring-blue-500"
+      />
+    </div>
+    <button className="bg-violet-600 hover:bg-violet-800 px-5 py-2 rounded-md font-semibold w-full sm:w-auto">
+      Subscribe
+    </button>
+  </div>
+</div>
+
+
     </div>
 
         
